@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🔥 HOT JAKE 🔥</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="🔥 HOT JAKE 🔥">
+    <meta name="keywords" content="🔥 HOT JAKE 🔥">
+    <meta name="author" content="Wesley de Groot (https://wesleydegroot.nl)">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 month">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        body {
+            background: url('./firebg.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            user-select: none;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 85vh;
+            position: absolute;
+            left: 40vw;
+            bottom: 0;
+            user-select: none;
+            animation: opacityAnimation 10s linear forwards;
+        }
+
+        .emoji,
+        .emoji-follower {
+            animation: 1s linear infinite move;
+        }
+
+        .curtain {
+            display: flex;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+        }
+
+        .curtain-left,
+        .curtain-right {
+            height: 100vh;
+            width: 50vw;
+            background: rgba(0, 0, 0, 1);
+            position: absolute;
+        }
+
+        .curtain-left {
+            left: 0;
+            background: black;
+            animation: rightToLeft 7s linear forwards;
+        }
+
+        .curtain-right {
+            right: 0;
+            background: black;
+            animation: leftToRight 7s linear forwards;
+        }
+
+
+        @keyframes move {
+            0% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        @keyframes rightToLeft {
+            0% {
+                left: 0vw;
+            }
+
+            100% {
+                left: -50vw;
+            }
+        }
+
+        @keyframes leftToRight {
+            0% {
+                left: 50vw;
+            }
+
+            100% {
+                left: 100vw;
+            }
+        }
+
+        @keyframes opacityAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        .introduction {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hot-jake-ascii-art {
+            position: absolute;
+            top: 10;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: opacityAnimation 10s linear backwards;
+            animation-direction: reverse;
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .hot-jake-ascii-art {
+                top: 5;
+                font-size: 0.5rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="emoji-follower">🔥 Click anywhere!</div>
+    <img src="./hot-jake-trans-pic-50.heic" alt="HOT &bull; JAKE">
+    <div class="hot-jake-ascii-art">
+        <pre>
+            🔥     🔥   🔥🔥🔥  🔥🔥🔥🔥🔥         🔥   🔥🔥🔥🔥   🔥   🔥  🔥🔥🔥🔥
+            🔥     🔥  🔥    🔥     🔥              🔥   🔥    🔥   🔥  🔥   🔥
+            🔥🔥🔥🔥   🔥    🔥     🔥              🔥   🔥🔥🔥🔥   🔥🔥     🔥🔥
+            🔥     🔥  🔥    🔥     🔥        🔥    🔥   🔥     🔥  🔥 🔥    🔥
+            🔥     🔥   🔥🔥🔥      🔥          🔥🔥🔥   🔥    🔥   🔥  🔥   🔥🔥🔥🔥
+        </pre>
+    </div>
+    <div class="curtain">
+        <div class="curtain-left"></div>
+        <div class="curtain-right"></div>
+    </div>
+    <div class="introduction">
+        <marquee direction="up" loop="1">
+            <p>Click anywhere to make 🔥 Jake, even more 🔥!</p>
+        </marquee>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('click', () => {
+        // get X and Y
+        const x = event.clientX;
+        const y = event.clientY;
+
+        // create fire emoji
+        const emoji = document.createElement('div');
+        emoji.innerHTML = '🔥'
+        emoji.style.position = 'absolute';
+        emoji.style.left = x + 'px';
+        emoji.style.top = y + 'px';
+        emoji.style.fontSize = '2rem';
+        emoji.classList.add('emoji');
+        document.body.appendChild(emoji);
+    });
+
+    // Fire emoji follow mouse
+    document.addEventListener('mousemove', (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+
+        const emoji = document.querySelector('.emoji-follower');
+        if (emoji) {
+            emoji.innerHTML = '🔥'
+            emoji.style.position = 'absolute';
+            emoji.style.left = x + 'px';
+            emoji.style.top = y + 'px';
+        }
+    });
+</script>
+
+</html>
