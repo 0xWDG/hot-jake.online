@@ -9,7 +9,7 @@
 ```
 
 
-"[Hot-jake.online](https://Hot-jake.online)" is a website built for fun.
+"[Hot-jake.online](https://Hot-jake.online)" (backup: [Github Pages](0xwdg.github.io/hot-jake.online/)) is a website built for fun.
 When we where at [Cafe Bax](https://www.cafebax.nl) for one of our weekly [Meeten and Drinken](https://appsterdam.rs/events/meeten-en-drinken/) events, we came up with the idea to ✨ Promote ✨ Jake's hotness.  
 And then this website has been born.
 
